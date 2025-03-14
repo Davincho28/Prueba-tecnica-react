@@ -2,9 +2,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { alerts } from "../alerts/alerts";
 import CardsUsers from "../components/CardsUsers";
+import Search from "../components/Search";
 
 function App() {
   const [data, setdata] = useState([]);
+  const [dataFilter, setDataFilter] = useState([])
   const { errormodal } = alerts();
 
   const api = "https://jsonplaceholder.typicode.com/users/";
@@ -20,6 +22,7 @@ function App() {
       if (response.ok) {
         const json = await response.json();
         setdata(json);
+        setDataFilter(json)
       } else {
         errormodal();
       }
@@ -32,11 +35,16 @@ function App() {
   return (
     <>
       <div>
-        <h1 className="fancy-text text-4xl">Users</h1>
+        <h1 className="fancy-text text-4xl text-center mt-2">Users</h1>
+      </div>
+
+      {/* Buscador por nombre */}
+      <div>
+        <Search data={data} setDataFilter={setDataFilter} dataFilter={dataFilter} />
       </div>
 
       <div>
-       <CardsUsers data={data} />
+       <CardsUsers data={dataFilter} />
       </div>
     </>
   );
