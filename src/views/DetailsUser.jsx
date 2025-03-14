@@ -29,16 +29,8 @@ const DetailsUser = () => {
   return (
     <>
       <div className="flex flex-col items-center space-y-6">
-        {/* Botón Regresar */}
-        <button
-          className="flex items-center gap-2 px-5 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition-all"
-          onClick={() => navigate("/")}
-        >
-          ⬅️ Regresar
-        </button>
-
         {/* Tarjeta de Información */}
-        <div className="max-w-md w-full bg-white shadow-lg rounded-2xl p-6 border border-gray-200">
+        <div className="max-w-md w-full bg-white shadow-lg rounded-2xl p-6 border border-gray-200 mt-4">
           <h2 className="text-2xl font-semibold text-gray-800 text-center">
             {details.name}
           </h2>
@@ -68,6 +60,13 @@ const DetailsUser = () => {
             )}
           </div>
         </div>
+        {/* Botón Regresar */}
+        <button
+          className="flex items-center gap-2 px-5 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+          onClick={() => navigate("/")}
+        >
+          ⬅️ Regresar
+        </button>
       </div>
     </>
   );

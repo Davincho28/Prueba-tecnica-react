@@ -1,10 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useApi } from "../hooks/getApi";
 
 const CardsUsers = ({ data }) => {
   const navigate = useNavigate();
-  const {getApi}=useApi()
 
 
   return (
