@@ -14,8 +14,8 @@ Asegúrate de tener instalado lo siguiente en tu máquina:
 Clona el repositorio y navega a la carpeta del proyecto:
 
 ```sh
-git clone https://github.com/tu-usuario/prueba-de-desarrollo.git
-cd prueba-de-desarrollo
+git clone https://github.com/Davincho28/Prueba-tecnica-react
+cd Prueba-tecnica-react
 ```
 
 Instala las dependencias:
@@ -65,13 +65,4 @@ npm run lint
 - [Tailwind CSS](https://tailwindcss.com/) - Framework de estilos basado en utilidades.
 - [React Router](https://reactrouter.com/) - Para gestionar la navegación en la aplicación.
 - SweetAlert2 - Para mostrar alertas personalizadas.
-
-## Contribuciones
-
-Si deseas contribuir, haz un fork del repositorio y envía un pull request con tus mejoras.
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT.
-
 
